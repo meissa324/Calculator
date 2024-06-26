@@ -1,26 +1,48 @@
 /** variables */
 
 :root{
-
-
-
-
+--black:#1A2130;
+--orange:#F4A261;
+--green:#81A263;
+--blue:#83B4FF;
+--grey:#EEEDEB;
 }
 
 
 /** properties */
 .entire-cal{
-    width: 50svw;
+    width: 60svw;
     height: 90svh;
+    border: 0.5rem solid black;
+}
+
+.operator{
+    background: var(--orange);
+}
+
+.num{
+    background: var(--green);
+}
+.numMan{
+    background: var(--blue);
 }
 
 .screen{
-    
+    border: 0.5rem solid black;
+    background: var(--grey);
 
 }
 
+.row div{
+    border-radius: 0.5rem;
+    margin: 0.3rem;
+}
+.row{
+    background: var(--black);
+}
+
 div{
-    border: 1rem solid black;
+    font-size: 130%;
 }
 
 
@@ -34,4 +56,35 @@ body{
 .entire-cal{
     display: flex;
     flex-flow: column nowrap;
+}
+
+.row{
+    flex: 1;
+    display: flex;
+}
+.screen{
+    flex: 1.5;
+}
+.row div{
+    flex:1;
+}
+
+#zero{
+    flex: 2;
+}
+
+.operator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.numMan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
