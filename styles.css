@@ -8,11 +8,30 @@
 }
 
 
-
 /** properties */
+.entire-cal{
+    width: 50svw;
+    height: 90svh;
+}
 
+.screen{
+    
 
+}
+
+div{
+    border: 1rem solid black;
+}
 
 
 
 /** flexbox */
+
+body{
+
+}
+
+.entire-cal{
+    display: flex;
+    flex-flow: column nowrap;
+}
