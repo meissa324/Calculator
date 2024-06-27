@@ -11,6 +11,7 @@ let num;//determines which array we work with
 
 //grouping event listeners
 let buttons = document.querySelector(".entire-cal");
+let valueOnScreen = document.querySelector("#calValue");//value on screen
 
 buttons.addEventListener("click",(e)=>{//to get each button's id when clicked
     let target = e.target;
@@ -30,7 +31,7 @@ buttons.addEventListener("click",(e)=>{//to get each button's id when clicked
         
     }
 
-
+    changeDisplay(valueOnScreen);//display values 
 
     
 })
@@ -149,4 +150,12 @@ function changeSign(arr){
     }
     
 
+}
+
+
+function changeDisplay(id){
+    let value;
+    if(operator.length === 0){ value = number1}
+    else if(operator.length > 0){value =number2}
+    id.textContent= value;
 }

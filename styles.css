@@ -30,6 +30,7 @@
 .screen{
     border: 0.5rem solid black;
     background: var(--grey);
+    padding: 0.3rem;
 
 }
 
@@ -64,6 +65,9 @@ body{
 }
 .screen{
     flex: 1.5;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 .row div{
     flex:1;
