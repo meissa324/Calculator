@@ -157,5 +157,5 @@ function changeDisplay(id){
     let value;
     if(operator.length === 0){ value = number1}
     else if(operator.length > 0){value =number2}
-    id.textContent= value;
+    return id.textContent= value;
 }
