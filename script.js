@@ -77,7 +77,7 @@ function isOperator(id){
     switch(id){
         case "AC": reset();
         break;
-        case "changeSign": operator = id;
+        case "changeSign": if(operator.length  === 0){changeSign(num1);} else if(operator.length > 0){changeSign(num2);}
         break;
         case "remainder": operator = id;
         break;
@@ -136,4 +136,17 @@ function reset(){
     num1.splice(0,delCount1);//we should then push 0
     num2.splice(0,delCount2);//we should then push result
     operator="";
+}
+
+function changeSign(arr){
+    //if it includes -, then remove it, else add it to start
+    if(arr.includes("-")){
+        return arr.splice(0,1)//delete the fist item, which is the -
+    }
+    else{
+        return arr.unshift("-")
+        //arr.splice()
+    }
+    
+
 }
